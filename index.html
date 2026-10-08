@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choo Kye Yong — Software Engineer</title>
+  <meta name="description" content="Choo Kye Yong — Computer Science student at NTU Singapore (Dean's List, graduating May 2027). Software testing, machine learning, and formal verification in Lean 4.">
+  <meta property="og:title" content="Choo Kye Yong — Software Engineer">
+  <meta property="og:description" content="NTU Computer Science, graduating May 2027. Open to full-time software engineering roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/slide4.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232f5fd0'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'>KY</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <!-- Decorative side rails: excerpts from my Lean 4 FYP proofs (filled in by script.js) -->
+  <div class="lean-rail left" aria-hidden="true"><pre class="lean-scroll"></pre></div>
+  <div class="lean-rail right" aria-hidden="true"><pre class="lean-scroll"></pre></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">Kye Yong<span>.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#interests">Off the clock</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-grid">
+        <div>
+          <p class="status"><span class="dot"></span> Open to full-time roles from May 2027</p>
+          <h1>Hi, I'm Choo Kye Yong.</h1>
+          <p class="lead">
+            Computer Science student at <strong>Nanyang Technological University</strong>, Singapore.
+            I build and test software, from end-to-end test automation for embedded Linux lab devices
+            to neural networks, and I'm currently using <strong>Lean&nbsp;4</strong> to formally prove
+            properties of OS scheduling algorithms.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
+            <!-- To add a resume download: save a PDF (without your phone number) as assets/resume.pdf, then uncomment:
+            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            -->
+          </div>
+        </div>
+        <figure class="slideshow" id="slideshow" aria-label="Photo of Kye Yong">
+          <img src="assets/img/slide1.jpg" alt="" class="active">
+          <img src="assets/img/slide2.jpg" alt="">
+          <img src="assets/img/slide3.jpg" alt="">
+          <img src="assets/img/slide4.jpg" alt="Kye Yong waving through a café window behind a frappuccino">
+        </figure>
+      </div>
+      <dl class="stats">
+        <div><dt>4.8 / 5.0</dt><dd>CGPA · Dean's List</dd></div>
+        <div><dt>May 2027</dt><dd>Graduation</dd></div>
+        <div><dt>Top in World</dt><dd>Cambridge AS Maths 2022</dd></div>
+        <div><dt>4</dt><dd>Spoken languages</dd></div>
+      </dl>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section-title"><span>01</span> About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a final-year Computer Science student at NTU. My interests sit where software
+            has to be <em>correct</em>: test automation, systems programming, and formal verification.
+            During my internship at Thermo Fisher Scientific I wrote and hardened end-to-end test suites
+            for the embedded Linux OS running on PCR instruments.
+          </p>
+          <p>
+            For my Final Year Project I'm using the Lean&nbsp;4 interactive theorem prover to verify that
+            OS scheduling algorithms are free from starvation and the convoy effect. The code scrolling
+            down the sides of this page comes from those proofs.
+          </p>
+          <p>
+            Outside of coursework I build things for the games I love, like a mod and a bot for
+            Slay the Spire&nbsp;2. I was also President of the NTU Fast Forward Board Games Society.
+            I speak English, Mandarin, Cantonese and Malay.
+          </p>
+        </div>
+        <div class="card edu-card">
+          <p class="eyebrow">Education</p>
+          <h3>Nanyang Technological University</h3>
+          <p>Bachelor of Computing (Computer Science), Honours</p>
+          <p class="muted">Aug 2023 – May 2027 · Singapore</p>
+          <ul class="tag-list">
+            <li>Dean's List</li>
+            <li>CGPA 4.8 / 5.0</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>Java</li><li>Python</li><li>C</li><li>C++</li><li>C#</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Bash</li><li>PowerShell</li><li>Solidity</li><li>Verilog</li><li>Lean 4</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>ML &amp; Data</h3>
+          <ul class="tag-list">
+            <li>PyTorch</li><li>PyTorch Lightning</li><li>Hugging Face</li><li>scikit-learn</li><li>pandas</li><li>Jupyter</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Testing &amp; Tools</h3>
+          <ul class="tag-list">
+            <li>Squish Test Automation</li><li>Linux</li><li>SSH</li><li>Git</li><li>Flask</li><li>.NET</li><li>Godot</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web3</h3>
+          <ul class="tag-list">
+            <li>Web3.js</li><li>Ethers.js</li><li>Hardhat</li><li>Foundry</li><li>Infura</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container">
+      <h2 class="section-title"><span>02</span> Experience</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-meta">Jan 2026 – May 2026</div>
+          <div class="timeline-body">
+            <h3>Software Test Intern <span class="at">@ Thermo Fisher Scientific</span></h3>
+            <p class="muted">Life Sciences · End-to-end testing of embedded Linux on PCR devices</p>
+            <ul>
+              <li>Wrote <strong>21 end-to-end test scripts</strong> for the embedded Linux OS on PCR instruments, working with my supervisor and two senior engineers.</li>
+              <li>Extended the test-suite runner to schedule multiple device models sequentially, which <strong>doubled testing frequency</strong>.</li>
+              <li>Added automatic SSH reconnection so the suite keeps running when a device briefly disconnects.</li>
+              <li>Added screenshots and richer context to failure logs in the automated CSV reports, which <strong>doubled the speed</strong> of writing new test scripts.</li>
+              <li>Decoupled 5 test cases so each runs independently, improving fault isolation. Also helped localise scripts for the Mandarin GUI.</li>
+            </ul>
+            <ul class="tag-list small"><li>Squish</li><li>Python</li><li>Embedded Linux</li><li>SSH</li></ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-meta">May 2024 – Jul 2024</div>
+          <div class="timeline-body">
+            <h3>Intern <span class="at">@ AECOM</span></h3>
+            <p class="muted">Civil Infrastructure Department</p>
+            <ul>
+              <li>Checked AutoCAD and shop drawings for compliance with contract requirements.</li>
+              <li>Inspected work sites with senior engineers, analysed soil test data and presented findings to the engineering team.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title"><span>03</span> Projects</h2>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="systems">Systems &amp; Verification</button>
+        <button class="filter" data-filter="ml">Machine Learning</button>
+        <button class="filter" data-filter="games">Games</button>
+        <button class="filter" data-filter="web3">Web3</button>
+        <button class="filter" data-filter="apps">Apps</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project featured" data-cat="systems">
+          <div class="featured-grid">
+            <div>
+              <p class="eyebrow">Final Year Project · Aug 2026 – May 2027</p>
+              <h3>Formal Verification of Scheduling Algorithms</h3>
+              <p>I'm proving properties of CPU schedulers in the Lean&nbsp;4 interactive theorem prover, using one shared definition of "starvation-free" and "convoy effect" so every scheduler is held to the same standard. Proved so far:</p>
+              <ul class="proof-list">
+                <li><span class="ok">✓</span> <span><strong>FCFS</strong> and <strong>Round Robin</strong> are starvation-free (Round Robin for any time quantum)</span></li>
+                <li><span class="no">✗</span> <span><strong>SJF</strong> and <strong>SRTF</strong> are <em>not</em> starvation-free, shown with a counterexample stream that floods in short jobs forever</span></li>
+                <li><span class="ok">✓</span> <span>FCFS and Round Robin both exhibit the convoy effect, and Round Robin behaves exactly like FCFS once the quantum is at least the long job's burst</span></li>
+              </ul>
+              <ul class="tag-list small"><li>Lean 4</li><li>Formal Methods</li><li>Operating Systems</li></ul>
+              <a class="repo-link" href="https://github.com/KyeYongChoo/fyp_scheduling_algorithms" target="_blank" rel="noopener">View the proofs on GitHub →</a>
+            </div>
+            <pre class="lean-code"><code data-lean>/-- **Main theorem.** SJF is *not* starvation-free:
+`starvation_stream` is well formed, yet `victim`
+never appears in `completed` at any time. -/
+theorem not_starvationFree : ¬ StarvationFree stepSJF := by
+  intro h_starvation_free
+  obtain ⟨completion_time, finished_process, h_mem, h_id⟩ :=
+    h_starvation_free starvation_stream starvation_stream_wf
+      0 victim (by simp [starvation_stream])
+  exact (starvation_stream_invariant completion_time).2.2
+    finished_process h_mem (by simpa [victim] using h_id)</code></pre>
+          </div>
+        </article>
+
+        <article class="card project" data-cat="games">
+          <p class="eyebrow">Side project · 2026 <span class="badge done">Released</span></p>
+          <h3>Slay the Spire 2 Mod: Adjust Unknown Chances</h3>
+          <p>A merchant ambushed me on a <strong>?</strong> node and cost me a floor one too many times, so I built this. It's a C# / .NET mod that shows the live odds of each <strong>?</strong> node becoming an event, fight, elite, treasure or shop. It follows the game's own rules, and you can set custom odds.</p>
+          <ul class="tag-list small"><li>C#</li><li>.NET 9</li><li>Modding</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/STS2-adjust-unknown-chances" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="games ml">
+          <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
+          <h3>STS2Bot</h3>
+          <p>A bot that plays Slay the Spire 2 in the live game. It's fully hooked into the game through a mod's local HTTP API, so it can play runs on its own. The rule-based strategy can't yet beat the Act 1 boss consistently. Every decision is logged as training data for a neural network policy later.</p>
+          <ul class="tag-list small"><li>Python</li><li>REST</li><li>Game AI</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/STS2Bot" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="web3">
+          <p class="eyebrow">Blockchain coursework · 2026 <span class="badge wip">In progress</span></p>
+          <h3>Token Launch via Dutch Auction</h3>
+          <p>Ethereum smart contracts and a web front end for an ERC-20 token sale over a 20-minute Dutch auction. Every winner pays the same clearing price, surplus ETH is refunded, and unsold tokens are burned.</p>
+          <ul class="tag-list small"><li>Solidity</li><li>ERC-20</li><li>JavaScript</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4053-Token-Launch-with-Dutch-Auction" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="web3">
+          <p class="eyebrow">Side project · 2026 <span class="badge paused">Paused</span></p>
+          <h3>Aave V3 Flash-Loan Liquidation Bot</h3>
+          <p>An attempt to liquidate unhealthy Aave positions on Ethereum with no upfront capital. The bot takes a flash loan, repays the borrower's debt, swaps the collateral on Uniswap V3, and reverts unless the trade makes a profit. It isn't working end to end yet. I paused it to focus on coursework.</p>
+          <ul class="tag-list small"><li>Solidity</li><li>TypeScript</li><li>Foundry</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/ArbitrageBot" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+
+        <article class="card project" data-cat="ml">
+          <p class="eyebrow">Computer Vision · 2026</p>
+          <h3>Flower Classification (Oxford Flowers 102)</h3>
+          <p>Fine-tuned ResNet-18 to ResNet-152 and ViT (Patch16/32) from Hugging Face. Used structured and unstructured pruning, deformable convolutions and visual prompt tuning to raise test accuracy by <strong>more than 10%</strong>.</p>
+          <ul class="tag-list small"><li>PyTorch</li><li>Hugging Face</li><li>ViT</li></ul>
+        </article>
+
+        <article class="card project" data-cat="ml">
+          <p class="eyebrow">NLP · 2026</p>
+          <h3>TREC Question Classification</h3>
+          <p>Compared approaches to classifying TREC questions by topic, from Word2Vec and GloVe embeddings to RNN, CNN, BiLSTM and BiGRU models.</p>
+          <ul class="tag-list small"><li>PyTorch</li><li>NLP</li><li>RNN / LSTM</li></ul>
+        </article>
+
+        <article class="card project" data-cat="ml">
+          <p class="eyebrow">Regression · 2026</p>
+          <h3>Housing Price Predictor</h3>
+          <p>A neural network that uses distance to MRT stations, floor area, flat type, town, storey and month to predict resale prices. Built with PyTorch Lightning for checkpointing and TensorBoard logging, and explained with Integrated Gradients.</p>
+          <ul class="tag-list small"><li>PyTorch Lightning</li><li>TensorBoard</li><li>Explainability</li></ul>
+        </article>
+
+        <article class="card project" data-cat="ml">
+          <p class="eyebrow">Audio · 2026</p>
+          <h3>Music Genre Classification</h3>
+          <p>Trained a neural network with early stopping and K-fold cross-validation, then used SHAP to find the 5 most relevant audio features.</p>
+          <ul class="tag-list small"><li>PyTorch</li><li>SHAP</li><li>scikit-learn</li></ul>
+        </article>
+
+        <article class="card project" data-cat="systems">
+          <p class="eyebrow">Operating Systems · 2026</p>
+          <h3>Nachos OS Kernel Work</h3>
+          <p>Implemented context switching, Round Robin scheduling, interrupts, semaphores, a TLB and inverted page tables in the Nachos instructional operating system.</p>
+          <ul class="tag-list small"><li>C++</li><li>OS Internals</li></ul>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">OOP · 2025</p>
+          <h3>Nearest Parking Finder</h3>
+          <p>Built and published an app that finds the nearest car park to any entered location, using OpenStreetMap and Singapore's Land Transport Authority API.</p>
+          <ul class="tag-list small"><li>Java</li><li>REST APIs</li><li>OpenStreetMap</li></ul>
+          <a class="repo-link" href="https://play.google.com/store/apps/details?id=com.juion.parkit" target="_blank" rel="noopener">Google Play →</a>
+        </article>
+
+        <article class="card project" data-cat="ml apps">
+          <p class="eyebrow">PSA Code Sprint 2024</p>
+          <h3>Ship Arrival Time Prediction</h3>
+          <p>A team-built AI dashboard that predicts ship berthing times, made because 90% of ships arrived late in 2024.</p>
+          <ul class="tag-list small"><li>Hackathon</li><li>Machine Learning</li><li>Dashboard</li></ul>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Data Structures · 2024</p>
+          <h3>Flight Planner</h3>
+          <p>Finds the shortest route between two airports by distance or by price, using graph search over a seeded network of 300+ airports. Includes a Tkinter GUI.</p>
+          <ul class="tag-list small"><li>Python</li><li>Graph Algorithms</li><li>Tkinter</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section container">
+      <h2 class="section-title"><span>04</span> Leadership &amp; Awards</h2>
+      <div class="lead-grid">
+        <div class="card lead-photo-card">
+          <figure class="photo">
+            <img src="assets/img/board-games-society.jpg" alt="Group photo of the NTU Fast Forward Board Games Society, with Kye Yong circled" loading="lazy">
+            <figcaption>The society at a weekly meetup. That's me, circled.</figcaption>
+          </figure>
+          <div>
+            <p class="eyebrow">Aug 2024 – Jul 2025</p>
+            <h3>President, NTU Fast Forward Board Games Society</h3>
+            <p>Ran a three-way collaboration with the Esports Society and Game Development Club that drew <strong>40+ public participants</strong>, and partnered with OCBC Singapore on a corporate Christmas festival. Grew sub-club attendance (some weekly meetings doubled) and coordinated a showcase for <strong>300+ attendees</strong>.</p>
+          </div>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Jan 2020 – Mar 2021</p>
+          <h3>Vice President, Sin Chew Daily Cadet Reporters</h3>
+          <p>Led teams writing about animal shelters and photography competitions, reaching more than <strong>1,000,000 readers</strong>. Wrote 12 articles in a year, making complex topics clear for a general audience.</p>
+        </div>
+        <div class="card award">
+          <p class="eyebrow">Award · 2022</p>
+          <h3>Top in the World, Cambridge AS Level Mathematics</h3>
+          <p>Cambridge Assessment International Education</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="section container">
+      <h2 class="section-title"><span>05</span> Off the clock</h2>
+      <p class="section-intro">What I'm playing, reading and watching. Each list is my top three, in order.</p>
+
+      <div class="interest-grid">
+        <div class="interest-col">
+          <h3 class="interest-head"><span class="interest-icon">🎮</span> Video games</h3>
+          <ol class="ranked">
+            <li class="rank-card" style="--hue: 200">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/the-alters.webp" alt="Fan art of three alternate versions of Jan from The Alters, with a startled sheep" loading="lazy" style="object-position: center 30%"><span class="rank">1</span></span>
+              <div class="rank-body"><h4>The Alters</h4><p class="by">11 bit studios</p><p>I often wonder how life would have turned out if I'd taken different paths, and that's the heart of this story. It's genuinely moving, and I love its exploring and base-building.</p><p class="credit">Art: <a href="https://www.instagram.com/reels/DK7zsfhRjfX/" target="_blank" rel="noopener">Mashed</a></p></div>
+            </li>
+            <li class="rank-card" style="--hue: 350">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/slay-the-spire.webp" alt="Fan art of a Slay the Spire character" loading="lazy" style="object-position: center 35%"><span class="rank">2</span></span>
+              <div class="rank-body"><h4>Slay the Spire 2</h4><p class="by">Mega Crit</p><p>Expertly designed and balanced. Every run stays tense to the very end without ever becoming overwhelming, and it never tests your reaction time. I liked it enough to <a href="#projects">write a mod and a bot</a> for it.</p><p class="credit">Art: <a href="https://x.com/r_x__n" target="_blank" rel="noopener">Rixian</a></p></div>
+            </li>
+            <li class="rank-card" style="--hue: 30">
+              <span class="rank-media fit-contain"><img src="assets/img/interests/disco-elysium.webp" alt="The Horrific Necktie from Disco Elysium" loading="lazy" style="object-position: center"><span class="rank">3</span></span>
+              <div class="rank-body"><h4>Disco Elysium</h4><p class="by">ZA/UM</p><p>A hilarious, absorbing story where everything feels worth investigating, and it never overstays its welcome.</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="interest-col">
+          <h3 class="interest-head"><span class="interest-icon">🎲</span> Board games</h3>
+          <ol class="ranked">
+            <li class="rank-card" style="--hue: 260">
+              <span class="rank-media fit-contain" style="background:#fff"><img src="assets/img/interests/decrypto.webp" alt="Decrypto game components" loading="lazy" style="object-position: center"><span class="rank">1</span></span>
+              <div class="rank-body"><h4>Decrypto</h4><p class="by">Thomas Dagenais-Lespérance</p><p>It works for almost any table: 4 players or 8, ultra-competitive or just joking around, strangers getting to know each other or old friends trading inside jokes.</p></div>
+            </li>
+            <li class="rank-card" style="--hue: 15">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/hanabi.webp" alt="Hanabi cards and tokens" loading="lazy" style="object-position: center"><span class="rank">2</span></span>
+              <div class="rank-body"><h4>Hanabi</h4><p class="by">Antoine Bauza</p><p>The fun is sneaking "extra clues" into choosing one action over another, then praying your friends caught what you meant.</p><p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Hanabi_card_game_materials.jpg" target="_blank" rel="noopener">Mannivu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p></div>
+            </li>
+            <li class="rank-card" style="--hue: 220">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/planet-x.webp" alt="The Search for Planet X game board" loading="lazy" style="object-position: center"><span class="rank">3</span></span>
+              <div class="rank-body"><h4>The Search for Planet X</h4><p class="by">Matthew O'Malley &amp; Ben Rosset</p><p>The pinnacle of deduction games. We plagiarise each other's research, try to read each other's minds and publish truly atrocious findings, yet it's surprisingly easy to pick up.</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="interest-col">
+          <h3 class="interest-head"><span class="interest-icon">🎬</span> Other media</h3>
+          <ol class="ranked">
+            <li class="rank-card" style="--hue: 45">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/jojo-rabbit.webp" alt="Jojo Rabbit film poster" loading="lazy" style="object-position: center 30%"><span class="rank">1</span></span>
+              <div class="rank-body"><h4>Jojo Rabbit</h4><p class="by">Taika Waititi</p><p>Comedy and tragedy at their finest, each making the other hit harder. It's told through a naive but good-hearted kid I can picture myself being at that age.</p></div>
+            </li>
+            <li class="rank-card" style="--hue: 330">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/kaguya-sama.webp" alt="Kaguya and Chika from Kaguya-sama: Love is War" loading="lazy" style="object-position: center 30%"><span class="rank">2</span></span>
+              <div class="rank-body"><h4>Kaguya-sama: Love is War</h4><p class="by">Aka Akasaka</p><p>I studied way too much as a kid, and I love romantic comedies. This is both.</p></div>
+            </li>
+            <li class="rank-card" style="--hue: 140">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/project-hail-mary.webp" alt="Fan art of Rocky from Project Hail Mary" loading="lazy" style="object-position: center 72%"><span class="rank">3</span></span>
+              <div class="rank-body"><h4>Project Hail Mary</h4><p class="by">Andy Weir</p><p>A hopeful, exciting story about what people can achieve when they work together, with no real villain.</p><p class="credit">Art: Shade Meadows</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="photo-strip">
+        <figure class="photo tilt-l">
+          <img src="assets/img/terraforming-mars.jpg" alt="Kye Yong taking a selfie at a game of Terraforming Mars with friends" loading="lazy">
+          <figcaption>A game of Terraforming Mars at a society night</figcaption>
+        </figure>
+        <figure class="photo tilt-r">
+          <img src="assets/img/tourist.jpg" alt="Kye Yong smiling with a snack on a lantern-lit street" loading="lazy">
+          <figcaption>Exploring, snack in hand</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact">
+      <h2 class="section-title"><span>06</span> Contact</h2>
+      <div class="card contact-card">
+        <h3>Let's talk.</h3>
+        <p>I'm looking for full-time software engineering roles starting <strong>May 2027</strong>, especially in testing, systems, or ML. Feel free to reach out.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:chookyeyong@gmail.com">chookyeyong@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> Choo Kye Yong · Singapore · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
