@@ -26,6 +26,4 @@ then visit http://localhost:8000.
   Use `data-cat` values `systems`, `ml`, `games`, `web3` or `apps` (space-separated for several) so the filters work.
 - Photos live in `assets/img/`, interest card images in `assets/img/interests/`. Keep them small (under ~150KB).
   The raw source folders `profile pictures/` and `Interests/` are git-ignored.
-- To add a resume download, export a PDF **without your phone number** to `assets/resume.pdf`
-  and uncomment the "Resume (PDF)" button in the hero section.
 - The `.docx` resume is git-ignored so it doesn't get published.
