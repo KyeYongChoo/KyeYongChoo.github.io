@@ -288,8 +288,8 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
         <article class="card project" data-cat="apps">
           <p class="eyebrow">Side project · 2026 <span class="badge done">Live</span></p>
           <h3>Freakiness Rater Telegram Bot</h3>
-          <p>A Telegram bot that lets my group chat vote on the freakiest message of the day. Reply to a message with <code>/freaky</code> to vote. At midnight it posts the winner, the freakiest message and a leaderboard. It keeps all-time stats in SQLite, catches up on any recaps it missed while offline, and runs in Docker on Google Cloud.</p>
-          <p class="muted">Privacy: the bot only saves messages that get a vote. It keeps the first 200 characters of the text, plus who sent it and who voted. Photos and other media are saved as a label like "[photo]", not the file. Votes taken back before the midnight recap are deleted. After that they're kept for the all-time stats.</p>
+          <p>A Telegram bot that lets my group chat vote on the freakiest message of the day by replying <code>/freaky</code>. At midnight it posts the winner and a leaderboard. It runs in Docker on Google Cloud.</p>
+          <p class="muted">Privacy: it only saves messages that get a vote (the first 200 characters), and group admins can delete everything with <code>/wipechat</code>.</p>
           <ul class="tag-list small"><li>Python</li><li>python-telegram-bot</li><li>SQLite</li><li>Docker</li></ul>
           <a class="repo-link" href="https://t.me/freakiness_rater_bot?startgroup=true" target="_blank" rel="noopener">Add to a group →</a>
           <a class="repo-link" href="https://github.com/KyeYongChoo/freakiness_rater_telegram_bot" target="_blank" rel="noopener">GitHub →</a>
