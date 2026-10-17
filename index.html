@@ -5,10 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Choo Kye Yong — Software Engineer</title>
   <meta name="description" content="Choo Kye Yong — Computer Science student at NTU Singapore (Dean's List, graduating May 2027). Software testing, machine learning, and formal verification in Lean 4.">
+  <link rel="canonical" href="https://kyeyongchoo.github.io/">
+  <meta name="google-site-verification" content="QdFUnMf7PltgT166i1vRgPJPSIVRtpXqce8FhuhHNX0">
+
+  <!-- how the link looks when shared (LinkedIn, WhatsApp, Telegram, etc.) -->
   <meta property="og:title" content="Choo Kye Yong — Software Engineer">
   <meta property="og:description" content="NTU Computer Science, graduating May 2027. Open to full-time software engineering roles.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/slide4.jpg">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://kyeyongchoo.github.io/">
+  <meta property="og:image" content="https://kyeyongchoo.github.io/assets/img/slide4.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- tells search engines this page is about a person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Choo Kye Yong",
+    "alternateName": "Kye Yong Choo",
+    "url": "https://kyeyongchoo.github.io/",
+    "image": "https://kyeyongchoo.github.io/assets/img/slide4.jpg",
+    "jobTitle": "Computer Science student",
+    "description": "Computer Science student at NTU Singapore, graduating May 2027. Software testing, machine learning and formal verification in Lean 4.",
+    "email": "mailto:chookyeyong@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "SG" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Nanyang Technological University" },
+    "knowsLanguage": ["English", "Chinese", "Cantonese", "Malay"],
+    "sameAs": [
+      "https://www.linkedin.com/in/kyeyongchoo/",
+      "https://github.com/KyeYongChoo"
+    ]
+  }
+  </script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232f5fd0'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'>KY</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,12 +276,45 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           <a class="repo-link" href="https://github.com/KyeYongChoo/ArbitrageBot" target="_blank" rel="noopener">GitHub →</a>
         </article>
 
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Side project · 2026 <span class="badge done">Live</span></p>
+          <h3>Freakiness Rater Telegram Bot</h3>
+          <p>A Telegram bot that lets my group chat vote on the freakiest message of the day. Reply to a message with <code>/freaky</code> to vote. At midnight it posts the winner, the freakiest message and a leaderboard. It keeps all-time stats in SQLite, catches up on any recaps it missed while offline, and runs in Docker on Google Cloud.</p>
+          <ul class="tag-list small"><li>Python</li><li>python-telegram-bot</li><li>SQLite</li><li>Docker</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/freakiness_rater_telegram_bot" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Web · 2026 <span class="badge done">Live</span></p>
+          <h3>Portfolio Site for Choo Xiao Ying</h3>
+          <p>A portfolio site for my sister, who works in media production. It has a filmography with project details and stills, a TikTok-style reel viewer that swipes on mobile, and embedded YouTube work. It's plain HTML, CSS and JS on Vercel, with structured data so search engines know it's about her.</p>
+          <ul class="tag-list small"><li>HTML / CSS</li><li>JavaScript</li><li>Vercel</li><li>SEO</li></ul>
+          <a class="repo-link" href="https://choo-xiao-ying-portfolio.vercel.app" target="_blank" rel="noopener">Live site →</a>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/choo-xiao-ying-portfolio" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="games">
+          <p class="eyebrow">Side project · 2026</p>
+          <h3>Fly in Pond</h3>
+          <p>A small browser game where you steer a fruit fly over a pond at dusk and lay eggs on lily pads. The neuron overlay and "field notes" use real data from the male fruit fly connectome that HHMI Janelia released in September 2026. The flight and egg-laying are toy physics, and the game says so.</p>
+          <ul class="tag-list small"><li>JavaScript</li><li>Canvas</li><li>Open Data</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/FlyInPond" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="ml">
+          <p class="eyebrow">AI coursework · 2026</p>
+          <h3>Teaching NanoGPT Maths with DPO</h3>
+          <p>A lab assignment for NTU's SC3000 Artificial Intelligence course. Starting from a NanoGPT model already fine-tuned on maths Q&amp;A, I trained it further with Direct Preference Optimization (DPO), which learns from pairs of preferred and rejected answers, and then tested it.</p>
+          <ul class="tag-list small"><li>PyTorch</li><li>LLM Fine-tuning</li><li>DPO</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/NanoGPT-Math" target="_blank" rel="noopener">GitHub →</a>
+        </article>
 
         <article class="card project" data-cat="ml">
           <p class="eyebrow">Computer Vision · 2026</p>
           <h3>Flower Classification (Oxford Flowers 102)</h3>
           <p>Fine-tuned ResNet-18 to ResNet-152 and ViT (Patch16/32) from Hugging Face. Used structured and unstructured pruning, deformable convolutions and visual prompt tuning to raise test accuracy by <strong>more than 10%</strong>.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>Hugging Face</li><li>ViT</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Deep-Learning" target="_blank" rel="noopener">GitHub →</a>
         </article>
 
         <article class="card project" data-cat="ml">
@@ -268,6 +329,7 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           <h3>Housing Price Predictor</h3>
           <p>A neural network that uses distance to MRT stations, floor area, flat type, town, storey and month to predict resale prices. Built with PyTorch Lightning for checkpointing and TensorBoard logging, and explained with Integrated Gradients.</p>
           <ul class="tag-list small"><li>PyTorch Lightning</li><li>TensorBoard</li><li>Explainability</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
         </article>
 
         <article class="card project" data-cat="ml">
@@ -275,6 +337,7 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           <h3>Music Genre Classification</h3>
           <p>Trained a neural network with early stopping and K-fold cross-validation, then used SHAP to find the 5 most relevant audio features.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>SHAP</li><li>scikit-learn</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
         </article>
 
         <article class="card project" data-cat="systems">
