@@ -203,9 +203,15 @@ const navIO = new IntersectionObserver(entries => {
     navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
   });
 }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+// Trigger on the section's top edge, not a share of its height: on phones the projects
+// section is many screens tall, so "5% visible" could never happen and it stayed hidden.
 const revealIO = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.05 });
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visible');
+    revealIO.unobserve(e.target);
+  });
+}, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
 sections.forEach(s => { navIO.observe(s); revealIO.observe(s); });
 
 // Project card videos: play only while on screen, and never autoplay for reduced motion
