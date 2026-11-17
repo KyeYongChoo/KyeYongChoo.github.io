@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script>
     // Apply saved theme before paint to avoid a flash
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -253,6 +253,40 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           </div>
         </article>
 
+        <article class="card project" data-cat="games ml">
+          <div class="thumb"><video src="assets/video/sts2bot.mp4" poster="assets/img/projects/sts2bot.webp" muted loop playsinline preload="none" aria-label="STS2Bot playing a Slay the Spire 2 combat turn by itself"></video></div>
+          <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
+          <h3>STS2Bot</h3>
+          <p>A bot that plays Slay the Spire 2 in the live game. It's fully hooked into the game through a mod's local HTTP API, so it can play runs on its own. The rule-based strategy can't yet beat the Act 1 boss consistently. Every decision is logged as training data for a neural network policy later.</p>
+          <ul class="tag-list small"><li>Python</li><li>REST</li><li>Game AI</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/STS2Bot" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card project" data-cat="games">
+          <div class="thumb"><video src="assets/video/godot-platformer.mp4" poster="assets/img/projects/godot-platformer.webp" muted loop playsinline preload="none" aria-label="Gameplay of the Godot pixel-art platformer"></video></div>
+          <p class="eyebrow">Side project · 2025 <span class="badge done">Finished</span></p>
+          <h3>2D Platformer in Godot</h3>
+          <p>A five-level pixel-art platformer I made with my friend Ezen in three weeks. You play a knight stranded in a world where horses were never invented, and it's your job to invent them. I built the player animations, sounds, enemies, ladders, save points and saving, and exported the final build. Ezen built the menus, key rebinding, double jump and most of the levels.</p>
+          <ul class="tag-list small"><li>Godot</li><li>GDScript</li><li>Team of 2</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="drive" href="https://drive.google.com/file/d/1ixL3KjYpErWZu6uGjN8Lo4RhJcar2Fkr/view" target="_blank" rel="noopener">Download for Windows →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/Ezennn/platformerMYR" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <div class="thumb"><video src="assets/video/notifilter.mp4" poster="assets/img/projects/notifilter.webp" muted loop playsinline preload="none" aria-label="NotiFilter's app icon beside a screen recording of the Quick Settings flow"></video></div>
+          <p class="eyebrow">Side project · 2026</p>
+          <h3>NotiFilter for Android</h3>
+          <p>An Android app that automatically dismisses notifications matching your regex rules. Tap a Quick Settings tile, pick the annoying notification, and you get a pre-filled rule with a live preview of what it would catch. It has no internet permission, so it can't send anything off your phone.</p>
+          <ul class="tag-list small"><li>Kotlin</li><li>Android</li><li>Material You</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/AndroidNotificationsFilter" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
         <article class="card project" data-cat="games">
           <div class="thumb"><img src="assets/img/projects/adjust-unknown-chances.webp" alt="The mod's tooltip over a ? node, listing the odds of event, enemy, elite, treasure and merchant" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026 <span class="badge done">Released</span></p>
@@ -262,17 +296,6 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           <div class="project-links">
             <a class="repo-link" data-icon="steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3814064648" target="_blank" rel="noopener">Steam Workshop →</a>
             <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/STS2-adjust-unknown-chances" target="_blank" rel="noopener">GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project" data-cat="games ml">
-          <div class="thumb"><video src="assets/video/sts2bot.mp4" poster="assets/img/projects/sts2bot.webp" muted loop playsinline preload="none" aria-label="STS2Bot playing a Slay the Spire 2 combat turn by itself"></video></div>
-          <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
-          <h3>STS2Bot</h3>
-          <p>A bot that plays Slay the Spire 2 in the live game. It's fully hooked into the game through a mod's local HTTP API, so it can play runs on its own. The rule-based strategy can't yet beat the Act 1 boss consistently. Every decision is logged as training data for a neural network policy later.</p>
-          <ul class="tag-list small"><li>Python</li><li>REST</li><li>Game AI</li></ul>
-          <div class="project-links">
-            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/STS2Bot" target="_blank" rel="noopener">GitHub →</a>
           </div>
         </article>
 
@@ -299,29 +322,6 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
             <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/sc4055-qae-option-pricing" target="_blank" rel="noopener">GitHub →</a>
             <a class="repo-link" data-icon="pdf" href="assets/docs/qae-option-pricing-report.pdf" target="_blank" rel="noopener">Report (PDF) →</a>
             <a class="repo-link" data-icon="video" href="assets/video/qae-presentation.mp4" target="_blank" rel="noopener">Presentation video →</a>
-          </div>
-        </article>
-
-        <article class="card project" data-cat="games">
-          <div class="thumb"><video src="assets/video/godot-platformer.mp4" poster="assets/img/projects/godot-platformer.webp" muted loop playsinline preload="none" aria-label="Gameplay of the Godot pixel-art platformer"></video></div>
-          <p class="eyebrow">Side project · 2025 <span class="badge done">Finished</span></p>
-          <h3>2D Platformer in Godot</h3>
-          <p>A five-level pixel-art platformer I made with my friend Ezen in three weeks. You play a knight stranded in a world where horses were never invented, and it's your job to invent them. I built the player animations, sounds, enemies, ladders, save points and saving, and exported the final build. Ezen built the menus, key rebinding, double jump and most of the levels.</p>
-          <ul class="tag-list small"><li>Godot</li><li>GDScript</li><li>Team of 2</li></ul>
-          <div class="project-links">
-            <a class="repo-link" data-icon="drive" href="https://drive.google.com/file/d/1ixL3KjYpErWZu6uGjN8Lo4RhJcar2Fkr/view" target="_blank" rel="noopener">Download for Windows →</a>
-            <a class="repo-link" data-icon="github" href="https://github.com/Ezennn/platformerMYR" target="_blank" rel="noopener">GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project" data-cat="apps">
-          <div class="thumb"><video src="assets/video/notifilter.mp4" poster="assets/img/projects/notifilter.webp" muted loop playsinline preload="none" aria-label="NotiFilter's app icon beside a screen recording of the Quick Settings flow"></video></div>
-          <p class="eyebrow">Side project · 2026</p>
-          <h3>NotiFilter for Android</h3>
-          <p>An Android app that automatically dismisses notifications matching your regex rules. Tap a Quick Settings tile, pick the annoying notification, and you get a pre-filled rule with a live preview of what it would catch. It has no internet permission, so it can't send anything off your phone.</p>
-          <ul class="tag-list small"><li>Kotlin</li><li>Android</li><li>Material You</li></ul>
-          <div class="project-links">
-            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/AndroidNotificationsFilter" target="_blank" rel="noopener">GitHub →</a>
           </div>
         </article>
 
@@ -676,6 +676,6 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
     <p>© <span id="year"></span> Choo Kye Yong · Singapore · <span class="qed">∎</span></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

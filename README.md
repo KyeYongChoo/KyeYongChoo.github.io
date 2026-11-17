@@ -33,6 +33,8 @@ then visit http://localhost:8000.
 - Card links go in `<div class="project-links">`. Give any link a `data-icon` for its tiny logo:
   `github`, `steam`, `play` (Google Play), `telegram`, `youtube`, `drive`, `claude`, `linkedin`, `instagram`, `x`,
   `wikimedia`, `cc`, `web` (live site), `pdf`, `video`, `download`, `image` or `mail`. The icons are defined at the end of `styles.css`.
+- After changing `styles.css` or `script.js`, bump the `?v=` number on their links in `index.html`. GitHub Pages lets
+  browsers cache them for 10 minutes, so without it visitors can get new HTML with the old CSS.
 - Full-length videos live in `assets/video/` and PDFs in `assets/docs/`. GitHub rejects files over 100MB, so compress
   videos first, e.g. `ffmpeg -i in.mp4 -vf scale=1280:-2 -crf 28 -preset slow -c:a aac -b:a 80k -movflags +faststart out.mp4`.
 - The `.docx` resume is git-ignored so it doesn't get published.
