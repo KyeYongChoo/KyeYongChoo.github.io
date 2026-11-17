@@ -87,10 +87,10 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Get in touch</a>
-            <a class="btn" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" data-icon="linkedin" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" data-icon="github" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
             <!-- To add a resume download: save a PDF (without your phone number) as assets/resume.pdf, then uncomment:
-            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            <a class="btn" data-icon="pdf" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
             -->
           </div>
         </div>
@@ -177,7 +177,9 @@
       <h2 class="section-title"><span>02</span> Experience</h2>
       <ol class="timeline">
         <li class="timeline-item">
-          <div class="timeline-meta">Jan 2026 – May 2026</div>
+          <div class="timeline-meta">Jan 2026 – May 2026
+            <img class="org-logo on-light" src="assets/img/logos/thermo-fisher.svg" alt="Thermo Fisher Scientific" width="132" height="30">
+            <img class="org-logo on-dark" src="assets/img/logos/thermo-fisher-white.svg" alt="Thermo Fisher Scientific" width="132" height="30"></div>
           <div class="timeline-body">
             <h3>Software Test Intern <span class="at">@ Thermo Fisher Scientific</span></h3>
             <p class="muted">Life Sciences · End-to-end testing of embedded Linux on PCR devices</p>
@@ -192,7 +194,9 @@
           </div>
         </li>
         <li class="timeline-item">
-          <div class="timeline-meta">May 2024 – Jul 2024</div>
+          <div class="timeline-meta">May 2024 – Jul 2024
+            <img class="org-logo on-light" src="assets/img/logos/aecom.svg" alt="AECOM" width="96" height="22">
+            <img class="org-logo on-dark" src="assets/img/logos/aecom-white.svg" alt="AECOM" width="96" height="22"></div>
           <div class="timeline-body">
             <h3>Intern <span class="at">@ AECOM</span></h3>
             <p class="muted">Civil Infrastructure Department</p>
@@ -234,7 +238,7 @@
                 <li><span class="ok">✓</span> <span>For periodic real-time tasks, <strong>EDF</strong> meets every deadline whenever any scheduler can, and <strong>Rate</strong> and <strong>Deadline Monotonic</strong> are optimal among fixed priorities</span></li>
               </ul>
               <ul class="tag-list small"><li>Lean 4</li><li>Formal Methods</li><li>Operating Systems</li></ul>
-              <a class="repo-link" href="https://github.com/KyeYongChoo/fyp_scheduling_algorithms" target="_blank" rel="noopener">View the proofs on GitHub →</a>
+              <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/fyp_scheduling_algorithms" target="_blank" rel="noopener">View the proofs on GitHub →</a>
             </div>
             <pre class="lean-code"><code data-lean>/-- **Main theorem.** SJF is *not* starvation-free:
 `starvation_stream` is well formed, yet `victim`
@@ -250,204 +254,296 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
         </article>
 
         <article class="card project" data-cat="games">
+          <div class="thumb"><img src="assets/img/projects/adjust-unknown-chances.webp" alt="The mod's tooltip over a ? node, listing the odds of event, enemy, elite, treasure and merchant" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026 <span class="badge done">Released</span></p>
           <h3>Slay the Spire 2 Mod: Adjust Unknown Chances</h3>
           <p>A merchant ambushed me on a <strong>?</strong> node and cost me a floor one too many times, so I built this. It's a C# / .NET mod that shows the live odds of each <strong>?</strong> node becoming an event, fight, elite, treasure or shop. It follows the game's own rules, and you can set custom odds.</p>
           <ul class="tag-list small"><li>C#</li><li>.NET 9</li><li>Modding</li></ul>
-          <a class="repo-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3814064648" target="_blank" rel="noopener">Steam Workshop →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/STS2-adjust-unknown-chances" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3814064648" target="_blank" rel="noopener">Steam Workshop →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/STS2-adjust-unknown-chances" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="games ml">
+          <div class="thumb"><video src="assets/video/sts2bot.mp4" poster="assets/img/projects/sts2bot.webp" muted loop playsinline preload="none" aria-label="STS2Bot playing a Slay the Spire 2 combat turn by itself"></video></div>
           <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
           <h3>STS2Bot</h3>
           <p>A bot that plays Slay the Spire 2 in the live game. It's fully hooked into the game through a mod's local HTTP API, so it can play runs on its own. The rule-based strategy can't yet beat the Act 1 boss consistently. Every decision is logged as training data for a neural network policy later.</p>
           <ul class="tag-list small"><li>Python</li><li>REST</li><li>Game AI</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/STS2Bot" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/STS2Bot" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="games">
+          <div class="thumb"><img src="assets/img/projects/seed-search.webp" alt="The Act 1 map of a hard Necrobinder seed found by the search" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
           <h3>Hunting for an Unwinnable Slay the Spire 2 Seed</h3>
           <p>Is there a Necrobinder seed where Act 1 forces you into an elite you can't beat? Instead of re-implementing the game, my search tool loads the game's own code headlessly and replays every route to the first elite, with a web UI to run and inspect the search. Two companion mods test candidate seeds: one lets you choose every card you draw, the other previews every random card and potion roll. No unwinnable seed found yet.</p>
           <ul class="tag-list small"><li>C#</li><li>.NET 9</li><li>Harmony</li><li>Modding</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/sts2-unwinnable-seed-search" target="_blank" rel="noopener">Seed search →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/CustomDrawOrder" target="_blank" rel="noopener">Custom Draw Order →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/RngPreview" target="_blank" rel="noopener">RNG Preview →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/sts2-unwinnable-seed-search" target="_blank" rel="noopener">Seed search →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/CustomDrawOrder" target="_blank" rel="noopener">Custom Draw Order →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/RngPreview" target="_blank" rel="noopener">RNG Preview →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="quantum">
+          <div class="thumb"><img src="assets/img/projects/qae-option-pricing.webp" alt="Quantum circuit loading a price distribution with a cascade of Ry rotations onto a payoff qubit" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Quantum computing coursework · 2026</p>
           <h3>Quantum Option Pricing</h3>
           <p>A group project on quantum amplitude estimation (QAE). Banks price options with Monte Carlo, whose error shrinks like 1/√M with M samples. QAE promises 1/M. We built QAE for European call options in Qiskit, measured that speed-up on a simulator, and tested where it breaks down: noise, the cost of loading the price distribution, and discretisation.</p>
           <ul class="tag-list small"><li>Python</li><li>Qiskit</li><li>Quantitative Finance</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/sc4055-qae-option-pricing" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/sc4055-qae-option-pricing" target="_blank" rel="noopener">GitHub →</a>
+            <a class="repo-link" data-icon="pdf" href="assets/docs/qae-option-pricing-report.pdf" target="_blank" rel="noopener">Report (PDF) →</a>
+            <a class="repo-link" data-icon="video" href="assets/video/qae-presentation.mp4" target="_blank" rel="noopener">Presentation video →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="games">
+          <div class="thumb"><video src="assets/video/godot-platformer.mp4" poster="assets/img/projects/godot-platformer.webp" muted loop playsinline preload="none" aria-label="Gameplay of the Godot pixel-art platformer"></video></div>
           <p class="eyebrow">Side project · 2025 <span class="badge done">Finished</span></p>
           <h3>2D Platformer in Godot</h3>
           <p>A five-level pixel-art platformer I made with my friend Ezen in three weeks. You play a knight stranded in a world where horses were never invented, and it's your job to invent them. I built the player animations, sounds, enemies, ladders, save points and saving, and exported the final build. Ezen built the menus, key rebinding, double jump and most of the levels.</p>
           <ul class="tag-list small"><li>Godot</li><li>GDScript</li><li>Team of 2</li></ul>
-          <a class="repo-link" href="https://drive.google.com/file/d/1ixL3KjYpErWZu6uGjN8Lo4RhJcar2Fkr/view" target="_blank" rel="noopener">Download for Windows →</a>
-          <a class="repo-link" href="https://github.com/Ezennn/platformerMYR" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="drive" href="https://drive.google.com/file/d/1ixL3KjYpErWZu6uGjN8Lo4RhJcar2Fkr/view" target="_blank" rel="noopener">Download for Windows →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/Ezennn/platformerMYR" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><video src="assets/video/notifilter.mp4" poster="assets/img/projects/notifilter.webp" muted loop playsinline preload="none" aria-label="NotiFilter's app icon beside a screen recording of the Quick Settings flow"></video></div>
           <p class="eyebrow">Side project · 2026</p>
           <h3>NotiFilter for Android</h3>
           <p>An Android app that automatically dismisses notifications matching your regex rules. Tap a Quick Settings tile, pick the annoying notification, and you get a pre-filled rule with a live preview of what it would catch. It has no internet permission, so it can't send anything off your phone.</p>
           <ul class="tag-list small"><li>Kotlin</li><li>Android</li><li>Material You</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/AndroidNotificationsFilter" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/AndroidNotificationsFilter" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><img src="assets/img/projects/usage-forward.webp" alt="Illustration of one robot handing a note to another" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Claude Code mod · 2026</p>
           <h3>usage-forward</h3>
           <p>When Claude Code is working alone, nobody sees the usage-limit warnings. This mod forwards them to Claude itself, once per percent from 90% to 99%, so it can checkpoint its work and write handover notes before the limit hits. Running subagents get the warning too. Submitted to Anthropic's public plugin marketplace.</p>
           <ul class="tag-list small"><li>TypeScript</li><li>Claude Code</li><li>Hooks</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/usage-forward" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/usage-forward" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><img src="assets/img/projects/mcq-quiz.webp" alt="The Blockchain Quiz 2 practice page made with the skill" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Claude skill · 2026</p>
           <h3>MCQ Quiz Page</h3>
-          <p>A Claude skill that turns lecture slides or tutorial solutions into a clickable revision quiz: multiple choice, fill-in-the-blank, ordering and short-answer questions, with a review tab of your mistakes, a retry mode and PDF export.</p>
+          <p>A Claude skill that turns lecture slides or tutorial solutions into a clickable revision quiz: multiple choice, fill-in-the-blank, ordering and short-answer questions, with a review tab of your mistakes, a retry mode and PDF export. The sample is a 71-question quiz it made for my blockchain course.</p>
           <ul class="tag-list small"><li>Claude Skills</li><li>HTML / JS</li><li>Revision</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/mcq-quiz-page-skill" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="claude" href="https://claude.ai/artifact/YL4VbQfbZ4pdtsFgiBPf1R" target="_blank" rel="noopener">Sample quiz →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/mcq-quiz-page-skill" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="security systems">
+          <div class="thumb"><img src="assets/img/projects/spectre-meltdown.webp" alt="The Meltdown and Spectre logos" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Security presentation · 2026 <span class="badge done">Released</span></p>
           <h3>Spectre &amp; Meltdown Demos</h3>
           <p>Companion code for our talk. The Spectre v1 demo is a real attack in C that leaks a secret string through speculative execution and cache timing on almost any Intel or AMD CPU. Today's CPUs can't run Meltdown, so that half is a step-by-step Python simulator of a model CPU.</p>
           <ul class="tag-list small"><li>C</li><li>Python</li><li>CPU Side Channels</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/meltdown_spectre_demo/releases/latest" target="_blank" rel="noopener">Download →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/meltdown_spectre_demo" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="download" href="https://github.com/KyeYongChoo/meltdown_spectre_demo/releases/latest" target="_blank" rel="noopener">Download →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/meltdown_spectre_demo" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="security web3">
+          <div class="thumb"><img src="assets/img/projects/coldcard.webp" alt="Demo slide: seeds came from a predictable software PRNG, about 40 bits instead of 128" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Class demo · 2026 <span class="badge done">Live</span></p>
           <h3>Coldcard Entropy Heist</h3>
           <p>An interactive demo of the 2026 Coldcard wallet incident, where a build error made seed generation use a software PRNG instead of the hardware one. Create a wallet on the vulnerable firmware, then watch the attacker brute-force all 24 seed words from a public fingerprint and sweep the funds. The search space is shrunk so it finishes in seconds.</p>
           <ul class="tag-list small"><li>JavaScript</li><li>Cryptography</li><li>BIP-39</li></ul>
-          <a class="repo-link" href="https://coldcard-hack-demo.vercel.app" target="_blank" rel="noopener">Live demo →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/Coldcard-Hack-Demo" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="web" href="https://coldcard-hack-demo.vercel.app" target="_blank" rel="noopener">Live demo →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/Coldcard-Hack-Demo" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="security">
+          <div class="thumb"><img src="assets/img/projects/campus-ctf.webp" alt="A green flag made of binary digits, with the text ctf_" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Penetration test · 2026</p>
           <h3>Campus Help Desk CTF Write-up</h3>
           <p>A penetration test of a local CTF lab, written up like a client report. I chained three flaws to get from anonymous visitor to a private document: credentials leaked in a file listed in <code>robots.txt</code>, an IDOR exposing staff notes, and path traversal on the download endpoint. Each finding comes with evidence and a fix.</p>
           <ul class="tag-list small"><li>Web Security</li><li>Postman</li><li>curl</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/Simulated-Pen-Testing" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="pdf" href="assets/docs/campus-ctf-writeup.pdf" target="_blank" rel="noopener">Write-up (PDF) →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/Simulated-Pen-Testing" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="web3">
-          <p class="eyebrow">Blockchain coursework · 2026 <span class="badge wip">In progress</span></p>
+          <div class="thumb"><img src="assets/img/projects/dutch-auction.webp" alt="The auction dashboard: current step and price, and a chart of the falling price against committed demand" loading="lazy" width="800" height="450"></div>
+          <p class="eyebrow">Blockchain coursework · 2026 <span class="badge done">Finished</span></p>
           <h3>Token Launch via Dutch Auction</h3>
-          <p>Ethereum smart contracts and a web front end for an ERC-20 token sale over a 20-minute Dutch auction. Every winner pays the same clearing price, surplus ETH is refunded, and unsold tokens are burned.</p>
+          <p>Ethereum smart contracts and a web front end for an ERC-20 token sale over a 20-minute Dutch auction. Every winner pays the same clearing price, surplus ETH is refunded, and unsold tokens are burned. AI coding agents wrote most of the code, so our term paper audits it: we found four security issues, including a claim loop that could lock a bidder's funds and rounding that broke the price schedule, and merged each fix with a regression test.</p>
           <ul class="tag-list small"><li>Solidity</li><li>ERC-20</li><li>JavaScript</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4053-Token-Launch-with-Dutch-Auction" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="video" href="assets/video/dutch-auction-demo.mp4" target="_blank" rel="noopener">Demo video →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/SC4053-Token-Launch-with-Dutch-Auction" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="web3">
+          <div class="thumb"><img src="assets/img/projects/aave-bot.webp" alt="Two candlestick charts, one falling with a bear and one rising with a bull" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026 <span class="badge paused">Paused</span></p>
           <h3>Aave V3 Flash-Loan Liquidation Bot</h3>
           <p>An attempt to liquidate unhealthy Aave positions on Ethereum with no upfront capital. The bot takes a flash loan, repays the borrower's debt, swaps the collateral on Uniswap V3, and reverts unless the trade makes a profit. It isn't working end to end yet. I paused it to focus on coursework.</p>
           <ul class="tag-list small"><li>Solidity</li><li>TypeScript</li><li>Foundry</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/ArbitrageBot" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/ArbitrageBot" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><img src="assets/img/projects/freakiness-rater.webp" alt="A Telegram chat where the bot confirms a /freaky vote" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026 <span class="badge done">Live</span></p>
           <h3>Freakiness Rater Telegram Bot</h3>
           <p>A Telegram bot that lets my group chat vote on the freakiest message of the day by replying <code>/freaky</code>. At midnight it posts the winner and a leaderboard. It runs in Docker on Google Cloud.</p>
           <p class="muted">Privacy: it only saves messages that get a vote (the first 200 characters), and group admins can delete everything with <code>/wipechat</code>.</p>
           <ul class="tag-list small"><li>Python</li><li>python-telegram-bot</li><li>SQLite</li><li>Docker</li></ul>
-          <a class="repo-link" href="https://t.me/freakiness_rater_bot?startgroup=true" target="_blank" rel="noopener">Add to a group →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/freakiness_rater_telegram_bot" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="telegram" href="https://t.me/freakiness_rater_bot?startgroup=true" target="_blank" rel="noopener">Add to a group →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/freakiness_rater_telegram_bot" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><img src="assets/img/projects/xiao-ying-portfolio.webp" alt="The landing page of Choo Xiao Ying's portfolio site" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Web · 2026 <span class="badge done">Live</span></p>
           <h3>Portfolio Site for Choo Xiao Ying</h3>
           <p>A portfolio site for my sister, who works in media production. It has a filmography with project details and stills, a TikTok-style reel viewer that swipes on mobile, and embedded YouTube work. It's plain HTML, CSS and JS on Vercel, with structured data so search engines know it's about her.</p>
           <ul class="tag-list small"><li>HTML / CSS</li><li>JavaScript</li><li>Vercel</li><li>SEO</li></ul>
-          <a class="repo-link" href="https://choo-xiao-ying-portfolio.vercel.app" target="_blank" rel="noopener">Live site →</a>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/choo-xiao-ying-portfolio" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="web" href="https://choo-xiao-ying-portfolio.vercel.app" target="_blank" rel="noopener">Live site →</a>
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/choo-xiao-ying-portfolio" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="games">
+          <div class="thumb"><img src="assets/img/projects/fly-in-pond.webp" alt="The Fly in Pond game: lily pads on a dark green pond at dusk" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Side project · 2026</p>
           <h3>Fly in Pond</h3>
           <p>A small browser game where you steer a fruit fly over a pond at dusk and lay eggs on lily pads. The neuron overlay and "field notes" use real data from the male fruit fly connectome that HHMI Janelia released in September 2026. The flight and egg-laying are toy physics, and the game says so.</p>
           <ul class="tag-list small"><li>JavaScript</li><li>Canvas</li><li>Open Data</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/FlyInPond" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/FlyInPond" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/nanogpt-dpo.webp" alt="Sample NanoGPT answers to arithmetic questions after DPO training" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">AI coursework · 2026</p>
           <h3>Teaching NanoGPT Maths with DPO</h3>
           <p>A lab assignment for NTU's SC3000 Artificial Intelligence course. Starting from a NanoGPT model already fine-tuned on maths Q&amp;A, I trained it further with Direct Preference Optimization (DPO), which learns from pairs of preferred and rejected answers, and then tested it.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>LLM Fine-tuning</li><li>DPO</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/NanoGPT-Math" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/NanoGPT-Math" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/flowers.webp" alt="Scatter plot of test accuracy against model size for each ResNet and ViT variant" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Computer Vision · 2026</p>
           <h3>Flower Classification (Oxford Flowers 102)</h3>
           <p>Fine-tuned ResNet-18 to ResNet-152 and ViT (Patch16/32) from Hugging Face. Used structured and unstructured pruning, deformable convolutions and visual prompt tuning to raise test accuracy by <strong>more than 10%</strong>.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>Hugging Face</li><li>ViT</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Deep-Learning" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/SC4001-Deep-Learning" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/trec-nlp.webp" alt="PyTorch Lightning console output: test metrics for the best RNN configuration" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">NLP · 2026</p>
           <h3>TREC Question Classification</h3>
           <p>Compared approaches to classifying TREC questions by topic, from Word2Vec and GloVe embeddings to RNN, CNN, BiLSTM and BiGRU models.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>NLP</li><li>RNN / LSTM</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/luiz8943/NLP-Group-Assignment-G30" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/housing-price.webp" alt="Bar chart of the six most important features by Integrated Gradients attribution" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Regression · 2026</p>
           <h3>Housing Price Predictor</h3>
           <p>A neural network that uses distance to MRT stations, floor area, flat type, town, storey and month to predict resale prices. Built with PyTorch Lightning for checkpointing and TensorBoard logging, and explained with Integrated Gradients.</p>
           <ul class="tag-list small"><li>PyTorch Lightning</li><li>TensorBoard</li><li>Explainability</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/music-genre.webp" alt="Table of the five most influential audio features by SHAP value" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Audio · 2026</p>
           <h3>Music Genre Classification</h3>
           <p>Trained a neural network with early stopping and K-fold cross-validation, then used SHAP to find the 5 most relevant audio features.</p>
           <ul class="tag-list small"><li>PyTorch</li><li>SHAP</li><li>scikit-learn</li></ul>
-          <a class="repo-link" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/SC4001-Neural-Networks-Music-Classification-Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card project" data-cat="ml">
+          <div class="thumb"><img src="assets/img/projects/anime-analysis.webp" alt="XGBoost feature importance chart for predicting anime scores" loading="lazy" width="800" height="450"></div>
+          <p class="eyebrow">Data Science coursework · 2024</p>
+          <h3>What Makes an Anime Score Well?</h3>
+          <p>A group project analysing about 25,000 anime from MyAnimeList to find what drives a high score. I built the decision tree models and ran the hypothesis tests. Among the findings: an anime with an English title averages 0.89 points higher, and XGBoost rated episode duration as more than twice as important as genre.</p>
+          <ul class="tag-list small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>XGBoost</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/agentyk/SC1015_FEL1_Group2" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="systems">
-          <p class="eyebrow">Operating Systems · 2026</p>
+          <div class="thumb"><img src="assets/img/projects/nachos.webp" alt="C++ code that looks up a physical page in the inverted page table" loading="lazy" width="800" height="450"></div>
+          <p class="eyebrow">Operating Systems · 2025</p>
           <h3>Nachos OS Kernel Work</h3>
-          <p>Implemented context switching, Round Robin scheduling, interrupts, semaphores, a TLB and inverted page tables in the Nachos instructional operating system.</p>
+          <p>Lab work in the Nachos instructional operating system. I made its FIFO scheduler preemptive Round Robin, driven by a 40-tick timer interrupt, and completed its software-managed TLB: inverted page table lookups and least-recently-used page replacement.</p>
           <ul class="tag-list small"><li>C++</li><li>OS Internals</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="github" href="https://github.com/KyeYongChoo/SC2005-Operating-Systems-Nachos-Labs" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
-          <p class="eyebrow">OOP · 2025</p>
+          <div class="thumb"><img src="assets/img/projects/parking-finder.webp" alt="Four screens of the ParkIt app: search, map and the closest car park's details" loading="lazy" width="800" height="450"></div>
+          <p class="eyebrow">Software Engineering · 2025</p>
           <h3>Nearest Parking Finder</h3>
           <p>Built and published an app that finds the nearest car park to any entered location, using OpenStreetMap and Singapore's Land Transport Authority API.</p>
           <ul class="tag-list small"><li>Java</li><li>REST APIs</li><li>OpenStreetMap</li></ul>
-          <a class="repo-link" href="https://play.google.com/store/apps/details?id=com.juion.parkit" target="_blank" rel="noopener">Google Play →</a>
+          <div class="project-links">
+            <a class="repo-link" data-icon="play" href="https://play.google.com/store/apps/details?id=com.juion.parkit" target="_blank" rel="noopener">Google Play →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="ml apps">
+          <div class="thumb"><img src="assets/img/projects/ship-arrival.webp" alt="Figma mock-up of the ship arrivals dashboard" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">PSA Code Sprint 2024</p>
           <h3>Ship Arrival Time Prediction</h3>
           <p>A team-built AI dashboard that predicts ship berthing times, made because 90% of ships arrived late in 2024.</p>
           <ul class="tag-list small"><li>Hackathon</li><li>Machine Learning</li><li>Dashboard</li></ul>
+          <div class="project-links">
+            <a class="repo-link" data-icon="youtube" href="https://youtu.be/aQIlSoknf4g" target="_blank" rel="noopener">Video →</a>
+          </div>
         </article>
 
         <article class="card project" data-cat="apps">
+          <div class="thumb"><img src="assets/img/projects/flight-planner.webp" alt="An aeroplane icon" loading="lazy" width="800" height="450"></div>
           <p class="eyebrow">Data Structures · 2024</p>
           <h3>Flight Planner</h3>
           <p>Finds the shortest route between two airports by distance or by price, using graph search over a seeded network of 300+ airports. Includes a Tkinter GUI.</p>
@@ -495,11 +591,11 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
           <ol class="ranked">
             <li class="rank-card" style="--hue: 200">
               <span class="rank-media fit-cover"><img src="assets/img/interests/the-alters.webp" alt="Fan art of three alternate versions of Jan from The Alters, with a startled sheep" loading="lazy" style="object-position: center 30%"><span class="rank">1</span></span>
-              <div class="rank-body"><h4>The Alters</h4><p class="by">11 bit studios</p><p>I often wonder how life would have turned out if I'd taken different paths, and that's the heart of this story. It's genuinely moving, and I love its exploring and base-building.</p><p class="credit">Art: <a href="https://www.instagram.com/reels/DK7zsfhRjfX/" target="_blank" rel="noopener">Mashed</a></p></div>
+              <div class="rank-body"><h4>The Alters</h4><p class="by">11 bit studios</p><p>I often wonder how life would have turned out if I'd taken different paths, and that's the heart of this story. It's genuinely moving, and I love its exploring and base-building.</p><p class="credit">Art: <a data-icon="instagram" href="https://www.instagram.com/reels/DK7zsfhRjfX/" target="_blank" rel="noopener">Mashed</a></p></div>
             </li>
             <li class="rank-card" style="--hue: 350">
               <span class="rank-media fit-cover"><img src="assets/img/interests/slay-the-spire.webp" alt="Fan art of a Slay the Spire character" loading="lazy" style="object-position: center 35%"><span class="rank">2</span></span>
-              <div class="rank-body"><h4>Slay the Spire 2</h4><p class="by">Mega Crit</p><p>Expertly designed and balanced. Every run stays tense to the very end without ever becoming overwhelming, and it never tests your reaction time. I liked it enough to <a href="#projects">write a mod and a bot</a> for it.</p><p class="credit">Art: <a href="https://x.com/r_x__n" target="_blank" rel="noopener">Rixian</a></p></div>
+              <div class="rank-body"><h4>Slay the Spire 2</h4><p class="by">Mega Crit</p><p>Expertly designed and balanced. Every run stays tense to the very end without ever becoming overwhelming, and it never tests your reaction time. I liked it enough to <a href="#projects">write a mod and a bot</a> for it.</p><p class="credit">Art: <a data-icon="x" href="https://x.com/r_x__n" target="_blank" rel="noopener">Rixian</a></p></div>
             </li>
             <li class="rank-card" style="--hue: 30">
               <span class="rank-media fit-contain"><img src="assets/img/interests/disco-elysium.webp" alt="The Horrific Necktie from Disco Elysium" loading="lazy" style="object-position: center"><span class="rank">3</span></span>
@@ -517,7 +613,7 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
             </li>
             <li class="rank-card" style="--hue: 15">
               <span class="rank-media fit-cover"><img src="assets/img/interests/hanabi.webp" alt="Hanabi cards and tokens" loading="lazy" style="object-position: center"><span class="rank">2</span></span>
-              <div class="rank-body"><h4>Hanabi</h4><p class="by">Antoine Bauza</p><p>The fun is sneaking "extra clues" into choosing one action over another, then praying your friends caught what you meant.</p><p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Hanabi_card_game_materials.jpg" target="_blank" rel="noopener">Mannivu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p></div>
+              <div class="rank-body"><h4>Hanabi</h4><p class="by">Antoine Bauza</p><p>The fun is sneaking "extra clues" into choosing one action over another, then praying your friends caught what you meant.</p><p class="credit">Photo: <a data-icon="wikimedia" href="https://commons.wikimedia.org/wiki/File:Hanabi_card_game_materials.jpg" target="_blank" rel="noopener">Mannivu</a>, <a data-icon="cc" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p></div>
             </li>
             <li class="rank-card" style="--hue: 220">
               <span class="rank-media fit-cover"><img src="assets/img/interests/planet-x.webp" alt="The Search for Planet X game board" loading="lazy" style="object-position: center"><span class="rank">3</span></span>
@@ -568,9 +664,9 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
         <h3>Let's talk.</h3>
         <p>I'm looking for full-time software engineering roles starting <strong>May 2027</strong>, especially in testing, systems, or ML. Feel free to reach out.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:chookyeyong@gmail.com">chookyeyong@gmail.com</a>
-          <a class="btn" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-primary" data-icon="mail" href="mailto:chookyeyong@gmail.com">chookyeyong@gmail.com</a>
+          <a class="btn" data-icon="linkedin" href="https://www.linkedin.com/in/kyeyongchoo/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" data-icon="github" href="https://github.com/KyeYongChoo" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>

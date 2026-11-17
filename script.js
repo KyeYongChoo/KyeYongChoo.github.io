@@ -207,3 +207,15 @@ const revealIO = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.05 });
 sections.forEach(s => { navIO.observe(s); revealIO.observe(s); });
+
+// Project card videos: play only while on screen, and never autoplay for reduced motion
+const cardVideos = document.querySelectorAll('.thumb video');
+if (!reducedMotion) {
+  const videoIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.play().catch(() => {});
+      else e.target.pause();
+    });
+  }, { threshold: 0.4 });
+  cardVideos.forEach(v => videoIO.observe(v));
+}
