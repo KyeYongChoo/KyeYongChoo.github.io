@@ -23,7 +23,7 @@ then visit http://localhost:8000.
 
 ## Updating
 - All content lives in `index.html`. Each project is an `<article class="card project" data-cat="...">`.
-  Use `data-cat` values `systems`, `ml`, `games`, `web3` or `apps` (space-separated for several) so the filters work.
+  Use `data-cat` values `systems`, `ml`, `games`, `security`, `quantum`, `web3` or `apps` (space-separated for several) so the filters work.
 - Photos live in `assets/img/`, interest card images in `assets/img/interests/`. Keep them small (under ~150KB).
   The raw source folders `profile pictures/` and `Interests/` are git-ignored.
 - The `.docx` resume is git-ignored so it doesn't get published.

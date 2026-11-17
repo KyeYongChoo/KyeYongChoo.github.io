@@ -122,7 +122,8 @@
           </p>
           <p>
             For my Final Year Project I'm using the Lean&nbsp;4 interactive theorem prover to verify that
-            OS scheduling algorithms are free from starvation and the convoy effect. The code scrolling
+            OS scheduling algorithms are free from starvation and the convoy effect, and that real-time
+            schedulers like EDF meet every deadline that any scheduler could. The code scrolling
             down the sides of this page comes from those proofs.
           </p>
           <p>
@@ -147,7 +148,7 @@
         <div class="skill-group">
           <h3>Languages</h3>
           <ul class="tag-list">
-            <li>Java</li><li>Python</li><li>C</li><li>C++</li><li>C#</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Bash</li><li>PowerShell</li><li>Solidity</li><li>Verilog</li><li>Lean 4</li>
+            <li>Java</li><li>Python</li><li>C</li><li>C++</li><li>C#</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>Bash</li><li>PowerShell</li><li>Kotlin</li><li>Solidity</li><li>Verilog</li><li>Lean 4</li>
           </ul>
         </div>
         <div class="skill-group">
@@ -159,7 +160,7 @@
         <div class="skill-group">
           <h3>Testing &amp; Tools</h3>
           <ul class="tag-list">
-            <li>Squish Test Automation</li><li>Linux</li><li>SSH</li><li>Git</li><li>Flask</li><li>.NET</li><li>Godot</li>
+            <li>Squish Test Automation</li><li>Linux</li><li>SSH</li><li>Git</li><li>Flask</li><li>.NET</li><li>Docker</li><li>Godot</li><li>Qiskit</li><li>Postman</li>
           </ul>
         </div>
         <div class="skill-group">
@@ -212,6 +213,8 @@
         <button class="filter" data-filter="systems">Systems &amp; Verification</button>
         <button class="filter" data-filter="ml">Machine Learning</button>
         <button class="filter" data-filter="games">Games</button>
+        <button class="filter" data-filter="security">Security</button>
+        <button class="filter" data-filter="quantum">Quantum</button>
         <button class="filter" data-filter="web3">Web3</button>
         <button class="filter" data-filter="apps">Apps</button>
       </div>
@@ -227,6 +230,8 @@
                 <li><span class="ok">✓</span> <span><strong>FCFS</strong> and <strong>Round Robin</strong> are starvation-free (Round Robin for any time quantum)</span></li>
                 <li><span class="no">✗</span> <span><strong>SJF</strong> and <strong>SRTF</strong> are <em>not</em> starvation-free, shown with a counterexample stream that floods in short jobs forever</span></li>
                 <li><span class="ok">✓</span> <span>FCFS and Round Robin both exhibit the convoy effect, and Round Robin behaves exactly like FCFS once the quantum is at least the long job's burst</span></li>
+                <li><span class="ok">✓</span> <span><strong>SRTF</strong> waits least of <em>any</em> schedule on every stream. No non-preemptive scheduler can, though SJF makes the best choice given what has arrived so far</span></li>
+                <li><span class="ok">✓</span> <span>For periodic real-time tasks, <strong>EDF</strong> meets every deadline whenever any scheduler can, and <strong>Rate</strong> and <strong>Deadline Monotonic</strong> are optimal among fixed priorities</span></li>
               </ul>
               <ul class="tag-list small"><li>Lean 4</li><li>Formal Methods</li><li>Operating Systems</li></ul>
               <a class="repo-link" href="https://github.com/KyeYongChoo/fyp_scheduling_algorithms" target="_blank" rel="noopener">View the proofs on GitHub →</a>
@@ -261,12 +266,80 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
         </article>
 
         <article class="card project" data-cat="games">
+          <p class="eyebrow">Side project · 2026 <span class="badge wip">In progress</span></p>
+          <h3>Hunting for an Unwinnable Slay the Spire 2 Seed</h3>
+          <p>Is there a Necrobinder seed where Act 1 forces you into an elite you can't beat? Instead of re-implementing the game, my search tool loads the game's own code headlessly and replays every route to the first elite, with a web UI to run and inspect the search. Two companion mods test candidate seeds: one lets you choose every card you draw, the other previews every random card and potion roll. No unwinnable seed found yet.</p>
+          <ul class="tag-list small"><li>C#</li><li>.NET 9</li><li>Harmony</li><li>Modding</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/sts2-unwinnable-seed-search" target="_blank" rel="noopener">Seed search →</a>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/CustomDrawOrder" target="_blank" rel="noopener">Custom Draw Order →</a>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/RngPreview" target="_blank" rel="noopener">RNG Preview →</a>
+        </article>
+
+        <article class="card project" data-cat="quantum">
+          <p class="eyebrow">Quantum computing coursework · 2026</p>
+          <h3>Quantum Option Pricing</h3>
+          <p>A group project on quantum amplitude estimation (QAE). Banks price options with Monte Carlo, whose error shrinks like 1/√M with M samples. QAE promises 1/M. We built QAE for European call options in Qiskit, measured that speed-up on a simulator, and tested where it breaks down: noise, the cost of loading the price distribution, and discretisation.</p>
+          <ul class="tag-list small"><li>Python</li><li>Qiskit</li><li>Quantitative Finance</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/sc4055-qae-option-pricing" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="games">
           <p class="eyebrow">Side project · 2025 <span class="badge done">Finished</span></p>
           <h3>2D Platformer in Godot</h3>
           <p>A five-level pixel-art platformer I made with my friend Ezen in three weeks. You play a knight stranded in a world where horses were never invented, and it's your job to invent them. I built the player animations, sounds, enemies, ladders, save points and saving, and exported the final build. Ezen built the menus, key rebinding, double jump and most of the levels.</p>
           <ul class="tag-list small"><li>Godot</li><li>GDScript</li><li>Team of 2</li></ul>
           <a class="repo-link" href="https://drive.google.com/file/d/1ixL3KjYpErWZu6uGjN8Lo4RhJcar2Fkr/view" target="_blank" rel="noopener">Download for Windows →</a>
           <a class="repo-link" href="https://github.com/Ezennn/platformerMYR" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Side project · 2026</p>
+          <h3>NotiFilter for Android</h3>
+          <p>An Android app that automatically dismisses notifications matching your regex rules. Tap a Quick Settings tile, pick the annoying notification, and you get a pre-filled rule with a live preview of what it would catch. It has no internet permission, so it can't send anything off your phone.</p>
+          <ul class="tag-list small"><li>Kotlin</li><li>Android</li><li>Material You</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/AndroidNotificationsFilter" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Claude Code mod · 2026</p>
+          <h3>usage-forward</h3>
+          <p>When Claude Code is working alone, nobody sees the usage-limit warnings. This mod forwards them to Claude itself, once per percent from 90% to 99%, so it can checkpoint its work and write handover notes before the limit hits. Running subagents get the warning too. Submitted to Anthropic's public plugin marketplace.</p>
+          <ul class="tag-list small"><li>TypeScript</li><li>Claude Code</li><li>Hooks</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/usage-forward" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="apps">
+          <p class="eyebrow">Claude skill · 2026</p>
+          <h3>MCQ Quiz Page</h3>
+          <p>A Claude skill that turns lecture slides or tutorial solutions into a clickable revision quiz: multiple choice, fill-in-the-blank, ordering and short-answer questions, with a review tab of your mistakes, a retry mode and PDF export.</p>
+          <ul class="tag-list small"><li>Claude Skills</li><li>HTML / JS</li><li>Revision</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/mcq-quiz-page-skill" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="security systems">
+          <p class="eyebrow">Security presentation · 2026 <span class="badge done">Released</span></p>
+          <h3>Spectre &amp; Meltdown Demos</h3>
+          <p>Companion code for our talk. The Spectre v1 demo is a real attack in C that leaks a secret string through speculative execution and cache timing on almost any Intel or AMD CPU. Today's CPUs can't run Meltdown, so that half is a step-by-step Python simulator of a model CPU.</p>
+          <ul class="tag-list small"><li>C</li><li>Python</li><li>CPU Side Channels</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/meltdown_spectre_demo/releases/latest" target="_blank" rel="noopener">Download →</a>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/meltdown_spectre_demo" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="security web3">
+          <p class="eyebrow">Class demo · 2026 <span class="badge done">Live</span></p>
+          <h3>Coldcard Entropy Heist</h3>
+          <p>An interactive demo of the 2026 Coldcard wallet incident, where a build error made seed generation use a software PRNG instead of the hardware one. Create a wallet on the vulnerable firmware, then watch the attacker brute-force all 24 seed words from a public fingerprint and sweep the funds. The search space is shrunk so it finishes in seconds.</p>
+          <ul class="tag-list small"><li>JavaScript</li><li>Cryptography</li><li>BIP-39</li></ul>
+          <a class="repo-link" href="https://coldcard-hack-demo.vercel.app" target="_blank" rel="noopener">Live demo →</a>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/Coldcard-Hack-Demo" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card project" data-cat="security">
+          <p class="eyebrow">Penetration test · 2026</p>
+          <h3>Campus Help Desk CTF Write-up</h3>
+          <p>A penetration test of a local CTF lab, written up like a client report. I chained three flaws to get from anonymous visitor to a private document: credentials leaked in a file listed in <code>robots.txt</code>, an IDOR exposing staff notes, and path traversal on the download endpoint. Each finding comes with evidence and a fix.</p>
+          <ul class="tag-list small"><li>Web Security</li><li>Postman</li><li>curl</li></ul>
+          <a class="repo-link" href="https://github.com/KyeYongChoo/Simulated-Pen-Testing" target="_blank" rel="noopener">GitHub →</a>
         </article>
 
         <article class="card project" data-cat="web3">
@@ -413,7 +486,7 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
     <!-- INTERESTS -->
     <section id="interests" class="section container">
       <h2 class="section-title"><span>05</span> Off the clock</h2>
-      <p class="section-intro">What I'm playing, reading and watching. Each list is my top three, in order.</p>
+      <p class="section-intro">What I'm playing, reading and watching. Each list is ranked, favourite first.</p>
 
       <div class="interest-grid">
         <div class="interest-col">
@@ -466,6 +539,10 @@ theorem not_starvationFree : ¬ StarvationFree stepSJF := by
             <li class="rank-card" style="--hue: 140">
               <span class="rank-media fit-cover"><img src="assets/img/interests/project-hail-mary.webp" alt="Fan art of Rocky from Project Hail Mary" loading="lazy" style="object-position: center 72%"><span class="rank">3</span></span>
               <div class="rank-body"><h4>Project Hail Mary</h4><p class="by">Andy Weir</p><p>A hopeful, exciting story about what people can achieve when they work together, with no real villain.</p><p class="credit">Art: Shade Meadows</p></div>
+            </li>
+            <li class="rank-card" style="--hue: 25">
+              <span class="rank-media fit-cover"><img src="assets/img/interests/coco.webp" alt="Miguel holding Mama Coco's hand in Coco" loading="lazy" style="object-position: center 20%"><span class="rank">4</span></span>
+              <div class="rank-body"><h4>Coco</h4><p class="by">Lee Unkrich</p><p>"Remember Me" means something different every time it's sung. Ernesto performs it as a showman's grand finale, most people in the film hear a lover seeing their partner off, and Héctor wrote it as a father comforting his daughter before a long trip. In the end, Miguel sings it to Mama Coco as a last-ditch effort to save Héctor, and to comfort her about the father who will never come home, one of the last memories she has left. No wonder it moved so many people to tears.</p></div>
             </li>
           </ol>
         </div>
